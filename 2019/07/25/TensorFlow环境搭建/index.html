@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://www.yumindexiaozhan.cn">
-  <title>Archives: 2019/7 | yuminxiaozhan</title>
+  <title>TensorFlow环境搭建 | yuminxiaozhan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Love life, love to explore">
-<meta property="og:type" content="website">
-<meta property="og:title" content="yuminxiaozhan">
-<meta property="og:url" content="http://www.yumindexiaozhan.cn/archives/2019/07/index.html">
+  <meta name="description" content="TensorFlow安装指南关于TensorFlowTensorFlow是由Google Brain团队开发并维护的深度学习算法编程框架，如同其他的编程框架一样，封装了很多的类以及函数，为我们节省了许多从底层开始编写的时间。选择TensorFlow的原因在于它拥有强大的团队支持，以及方便快捷的使用方法，本文着重强调下载能够支持AVX2等加速功能的TensorFlow，方便我们学习研究，如果仅需要简">
+<meta name="keywords" content="python,编程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TensorFlow环境搭建">
+<meta property="og:url" content="http://www.yumindexiaozhan.cn/2019/07/25/TensorFlow环境搭建/index.html">
 <meta property="og:site_name" content="yuminxiaozhan">
-<meta property="og:description" content="Love life, love to explore">
+<meta property="og:description" content="TensorFlow安装指南关于TensorFlowTensorFlow是由Google Brain团队开发并维护的深度学习算法编程框架，如同其他的编程框架一样，封装了很多的类以及函数，为我们节省了许多从底层开始编写的时间。选择TensorFlow的原因在于它拥有强大的团队支持，以及方便快捷的使用方法，本文着重强调下载能够支持AVX2等加速功能的TensorFlow，方便我们学习研究，如果仅需要简">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-07-25T13:42:16.768Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yuminxiaozhan">
-<meta name="twitter:description" content="Love life, love to explore">
+<meta name="twitter:title" content="TensorFlow环境搭建">
+<meta name="twitter:description" content="TensorFlow安装指南关于TensorFlowTensorFlow是由Google Brain团队开发并维护的深度学习算法编程框架，如同其他的编程框架一样，封装了很多的类以及函数，为我们节省了许多从底层开始编写的时间。选择TensorFlow的原因在于它拥有强大的团队支持，以及方便快捷的使用方法，本文着重强调下载能够支持AVX2等加速功能的TensorFlow，方便我们学习研究，如果仅需要简">
   
     <link rel="alternative" href="/atom.xml" title="yuminxiaozhan" type="application/atom+xml">
   
@@ -153,36 +155,88 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-TensorFlow环境搭建" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      TensorFlow环境搭建
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/25/TensorFlow环境搭建/" class="archive-article-date">
+
+        
+        <a href="/2019/07/25/TensorFlow环境搭建/" class="archive-article-date">
   	<time datetime="2019-07-25T13:38:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-25</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/25/TensorFlow环境搭建/">TensorFlow环境搭建</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="TensorFlow安装指南"><a href="#TensorFlow安装指南" class="headerlink" title="TensorFlow安装指南"></a>TensorFlow安装指南</h1><h2 id="关于TensorFlow"><a href="#关于TensorFlow" class="headerlink" title="关于TensorFlow"></a>关于TensorFlow</h2><p>TensorFlow是由Google Brain团队开发并维护的深度学习算法编程框架，如同其他的编程框架一样，封装了很多的类以及函数，为我们节省了许多从底层开始编写的时间。<br>选择TensorFlow的原因在于它拥有强大的团队支持，以及方便快捷的使用方法，本文着重强调下载能够支持AVX2等加速功能的TensorFlow，方便我们学习研究，如果仅需要简单的使用请参考我的上一篇博客，直接从anaconda的terminal进行pip安装。</p>
+<h2 id="安装前的准备工作"><a href="#安装前的准备工作" class="headerlink" title="安装前的准备工作"></a>安装前的准备工作</h2><p>搭建好虚拟环境，详情参考上一篇博客；卸载原来的tensorflow，不然会产生冲突。<br>卸载之前的tensorflow命令。 <br> </p>
+<blockquote>
+<p>pip uninstall tensorflow</p>
+</blockquote>
+<h2 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h2><p>我们安装的是GPU版本，因为GPU版本可以让你的程序运行拥有更快的速率。<br>在anaconda terminal执行命令。</p>
+<blockquote>
+<p>pip install tensorflow-gpu==1.3.0 -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple" target="_blank" rel="noopener">https://pypi.tuna.tsinghua.edu.cn/simple</a><br><br>pip install tensorflow-tensorboard==0.1.8 -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple" target="_blank" rel="noopener">https://pypi.tuna.tsinghua.edu.cn/simple</a><br><br>h5py==2.7.1 -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple" target="_blank" rel="noopener">https://pypi.tuna.tsinghua.edu.cn/simple</a><br><br>Keras==2.0.8 -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple" target="_blank" rel="noopener">https://pypi.tuna.tsinghua.edu.cn/simple</a></p>
+</blockquote>
+<p>这里采用了清华的源，不然速度会非常之慢。</p>
+<h2 id="进行测试"><a href="#进行测试" class="headerlink" title="进行测试"></a>进行测试</h2><p>这里我们通过一段测试文件来测试我们的tensorflow以及依赖项是否安装成功。</p>
+<blockquote>
+<p>import tensorflow as tf<br><br>greeting = tf.constant(‘Hello Google Tensorflow!’)<br><br>sess = tf.Session()<br><br>result = sess.run(greeting)<br><br>print(result)<br><br>sess.close()<br></p>
+</blockquote>
+<p>如果成功运行会打印出’Hello Google Tensorflow’的语句。</p>
+<h2 id="遇到的一些问题"><a href="#遇到的一些问题" class="headerlink" title="遇到的一些问题"></a>遇到的一些问题</h2><p>可能会出现在import tensorflow as tf时出现问题，这个是因为GPU加速没有适配好的原因，可以重新执行一遍</p>
+<blockquote>
+<p>pip install tensorflow</p>
+</blockquote>
+<p>语句，当然别忘记在后面换成国内的源。<br>可能在运行过程出现FutureWarning的问题，这是因为h5py的版本较低引起的，可以通过运行下面语句解决。</p>
+<blockquote>
+<p>pip install –upgrade h5py</p>
+</blockquote>
+<p>如果出现tensorflow提示你使用AVX2，可以在程序中使用</p>
+<blockquote>
+<p>import os<br><br>os.environ[‘TF_CPP_MIN_LOG_LEVEL’] = ‘2’</p>
+</blockquote>
+<p>进行关闭或者进入tensorflow官网通过源码进行编译。</p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -198,168 +252,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.yumindexiaozhan.cn/2019/07/25/TensorFlow环境搭建/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/25/快速搭建python虚拟环境/" class="archive-article-date">
-  	<time datetime="2019-07-25T11:06:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-25</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/07/25/快速搭建python虚拟环境/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">快速搭建python虚拟环境</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/25/快速搭建python虚拟环境/">快速搭建python虚拟环境</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/25/不错的风景照/" class="archive-article-date">
-  	<time datetime="2019-07-25T02:30:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/25/不错的风景照/">不错的风景照</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">生活</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">摄影</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/24/my-first-blog/" class="archive-article-date">
-  	<time datetime="2019-07-24T11:57:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/24/my-first-blog/">my first blog</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">生活</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/24/hello-world/" class="archive-article-date">
-  	<time datetime="2019-07-24T10:33:53.813Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/24/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -382,8 +374,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
